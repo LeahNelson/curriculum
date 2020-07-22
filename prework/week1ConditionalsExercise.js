@@ -56,13 +56,16 @@ function exercise1(num1) {
   // ------------------------------------------
   // Write your code for exercise 1 below here:
   // ------------------------------------------
-
+  answer1 = "num1 is small"
+  if(num1 > 10){
+    answer1 = `The value of num1 is ${num1} and is greater than 10`
+  }
   // ------------------------------------------
   // And above here
   // ------------------------------------------
   return answer1;
 }
-
+ exercise1(15);
 
 // EXERCISE 2.
 // Write an if/else conditional statement that if given a number will assign
@@ -79,12 +82,18 @@ function exercise2(num2) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+if(num2 % 2 === 0){
+  answer2 = `${num2} is even`
+}else if (num2 % 2 != 0){
+  answer2 = `${num2} is odd`
+}
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer2;
 }
+
+exercise2(6);
 
 
 // EXERCISE 3.
@@ -101,13 +110,21 @@ function exercise3(num3) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
+  if(num3 > 0){
+  answer3 = `${num3} is positive`
 
+  }else if(num3 < 0){
+    answer3 =`${num3} is negative`
+  }else if(num3 === 0){
+    answer3 =`${num3} is zero`
+
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer3;
 }
-
+exercise3(-8)
 
 // EXERCISE 4.
 // Write an if/else statement such that if `varA` and `varB` are strings or
@@ -120,12 +137,18 @@ function exercise4(varA, varB) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if(varA === varB){
+    answer4 = " varA and varB are equal"
+  }else{
+    answer4 = " varA and varB differ"
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer4;
 }
+
+exercise4("3", "5")
 
 
 // EXERCISE 5.
@@ -143,12 +166,18 @@ function exercise6(varA, varB, varC) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if((varA != varC) && (varB != varC ) && (varA === varB)){
+    answer6 = true
+  }else{
+    answer6 = false
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer6;
 }
+
+exercise6(2,2,2)
 
 
 // EXERCISE 8.
@@ -169,12 +198,31 @@ function exercise7(num7) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+ 
+  switch (true) {
+    case typeof num7 === "number" && num7 === 1:  
+      answer7 = "You won!"
+      break;
+    case num7 === 7:
+       answer7 = "You are lucky!"
+      break;
+    case num7 === 101:
+      answer7 = "Welcome to coding 101!"
+     break;
+    case num7 === 1000000:
+    answer7 = "You are one in a million!"
+     break;
+    default:
+      answer7 = "Thanks for that!"
+      break;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer7;
-}
+};
+
+exercise7(1);
 
 // EXERCISE 8.
 // Using any conditional assign the value of true to answer8 if:
@@ -186,12 +234,24 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
+  switch (true) {
+    case amount1 > minimum && amount1 < maximum &&
+     amount2 > minimum && amount2 < maximum:
+      answer8 = true
+      
+      break;
+  
+    default:
+      answer8 = false
+      break;
+  }
 
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer8;
 }
+exercise8(2,2,1,4)
 
 // EXERCISE 9.
 // In this exercise, if `item` is a number, follow the rules given in Exercise 7
@@ -202,16 +262,21 @@ function exercise8(amount1, amount2, minimum, maximum) {
 // "Please send a number, that was a boolean."
 function exercise9(item) {
   let answer9;
+  let type = typeof item
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+if(typeof item === "number"){
+  answer9 = "You won!"
+}else{
+  answer9 = `Please send a number, that was a ${type}.`
+}
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer9;
 }
-
+exercise9(5)
 
 // EXERCISE 10.
 // This is question is a modified version of a classic programming question
@@ -228,12 +293,27 @@ function exercise10(num10) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+if(num10 % 3 === 0){
+  answer10 = "Fizz"
+  console.log("Fizz")
+}
+ if( num10 % 5 === 0){
+  answer10 = "Buzz"
+  console.log("Buzz")
+} 
+if (num10 % 15 === 0){
+  answer10 ="Fizz Buzz"
+  console.log("Fizz Buzz")
+}else{
+  answer10 = num10
+  console.log(answer10);
+}
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer10;
 }
+exercise10(15);
 
 // Congrats, you made it to the end! You rock!
 // Did you find this easy or hard? If you used references, which ones helped you? 

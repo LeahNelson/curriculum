@@ -11,24 +11,73 @@
 
 // Exercise 1. Write a 'while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
+// let x = 0
+
+// while( x < 5){
+//   x++;
+//   console.log(x);
+// }
 
 
-// Exercise 2. Write a 'do while' loop that prints the integers (whole numbers)
-// between 1 and 5 (inclusive).
+
+// // Exercise 2. Write a 'do while' loop that prints the integers (whole numbers)
+// // between 1 and 5 (inclusive).
+// let j = 0;
+
+// do{
+//   j++;
+//   console.log(j);
+// }while (j < 5);
+
+// // Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
+// // between 1 and 5 (inclusive).
+
+// for( var i = 1; i < 6 ; i++ ){
+// console.log(i);
+// };
 
 
-// Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
-// between 1 and 5 (inclusive).
+// // Exercise 4. Now we want a loop that prints the integers 
+// // counting DOWN from 10 to 1 (inclusive). Write three loops that do this, to practice
+// // writing loops in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+// let y = 11
 
+// while( y > 1){
+//   y--;
+//   console.log(y);
+// }
 
-// Exercise 4. Now we want a loop that prints the integers 
-// counting DOWN from 10 to 1 (inclusive). Write three loops that do this, to practice
-// writing loops in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+// let z = 11;
 
+// do{
+//   z--;
+//   console.log(z);
+// }while (z > 1);
 
+// for( var i = 10; i > 0 ; i-- ){
+//   console.log(i);
+//   };
 // Exercise 5. Write a loop that prints the integers from 7 to 27. Write this 
 // loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+// let x = 6
 
+// while( x < 27){
+//   x++;
+//   console.log(x);
+// }
+
+
+// let j = 6;
+
+// do{
+//   j++;
+//   console.log(j);
+// }while (j < 27);
+
+
+// for( var i = 7; i < 28 ; i++ ){
+// console.log(i);
+// };
 
 // Exercise 6. Write a loop that prints numbers between 0 and 100, counting by tens.
 // I.e. it will print 10, then 20, then 30, etc. 
@@ -38,17 +87,21 @@
 // Exercise 7. Add a comment as to why the following loop is an infinite loop (will 
 // run without ever stopping). Then fix the loop so that it stops when
 // counterFour is equal to -100.
-
-let counterFour = 1;
-while (counterFour < 2) {
-  console.log('HELP ME!')
-  counterFour--;
-}
+//  the while condition will always be true
+// let counterFour = 1;
+// while (counterFour > -100) {
+//   console.log('HELP ME!')
+//   counterFour--;
+// }
 
 
 // Exercise 8. Make a variable that contains your favorite integer. Write a loop 
 // (your choice which type) that prints the integers from 0 to that number.
+let fav = 40;
 
+// for (var i = 0; i < fav + 1; i++){
+//   console.log(i);
+// }
 
 // Exercise 9. Make a variable that contains your favorite integer (this time make sure it's 
 // less than 100). Write a loop (your choice which type) that prints the integers from 0 to 100.
@@ -90,13 +143,13 @@ inside 1
 *********************************** 
 */
 
-for (let outsideCounter = 0; outsideCounter <= 3; ???) {
-  console.log("counting down from", outsideCounter);
-  for (let insideCounter = outsideCounter; ???; ???) {
-    console.log("inside", ???);
-  }
-  console.log("***********************************")
-}
+// for (let outsideCounter = 0; outsideCounter <= 3; ???) {
+//   console.log("counting down from", outsideCounter);
+//   for (let insideCounter = outsideCounter; ???; ???) {
+//     console.log("inside", ???);
+//   }
+//   console.log("***********************************")
+// }
 
 
 // Congrats, you made it to the end!

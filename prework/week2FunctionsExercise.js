@@ -12,33 +12,64 @@
 
 // Exercise 1. Define a function called logGreeting() that prints the string “Hello!” (use console.log). 
 // Underneath the function, write the line of code that runs the function. 
-
+function logGreeting(){
+console.log("Hello!")
+}
+logGreeting();
 
 // Exercise 2. Define a function called getName() that *returns* a string that is your name. 
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function. 
-
+function getName(name){
+  return name;
+}
+console.log(getName("Leah"));
 
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2() 
 // that prints a full sentence that contains your name: "Hello! My name is <name>."
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2(). 
-
+function logGreeting2(){
+  return `Hello! My name is ${getName("Leah")}.` 
+}
+console.log(logGreeting2());
 
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
 // The function should return the sum of the 3 numbers.
 // Then write some function calls you would use to test your function.
-
+function add(x,y,z){
+return x + y + z
+}
+console.log(add(1,4,6));
 
 // Exercise 5. Let's say a museum gives a discount for children ages 14 or under, and seniors 65 or older.
 // Write a function that takes in a person's age and returns true if they should get a discount.
 // Otherwise it should return false.
 // Then write some function calls you would use to test your function.
+function ageCheck(age){
+  if (age <= 14){
+    return true;
 
+  } else if (age >= 65){
+   return true;
+  }else{
+    return false;
+  }
+}
+console.log("ageCheck:" + ageCheck(76));
+console.log("ageCheck:" + ageCheck(14));
+console.log("ageCheck:" + ageCheck(65));
+console.log("ageCheck:" + ageCheck(25));
 
 // Exercise 6. Write a function that takes 2 parameters -- one number and one string.
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
+function printMe (j,string){
+  for(var i = 0; i< j; i++ ){
+    console.log(string);
+  }
+}
+printMe(4, "Winning!");
 
 
 // Exercise 7. Read the following code (don't run it yet)
@@ -85,11 +116,16 @@ console.log("The value of b is " + b);
 // Here's a string I made representing my grocery list.
 // Using split() and groceryList, make an array of my grocery list items
 const groceryList = "eggs,carrots,orange juice"
+console.log(groceryList.split(" , "))
+
+
 
 // Here's a string I made representing my morning schedule.
 // Using split() and mySchedule, make an array of the *first 2* things I do in the morning
 // There are multiple ways to do this, but try doing it using only the split() function.
 const mySchedule = 'wake up--->brush teeth--->eat breakfast--->go to work'
+const twoAM = mySchedule.split("--->", 2);
+console.log(twoAM)
 
 
 
