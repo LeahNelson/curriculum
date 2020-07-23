@@ -113,7 +113,13 @@ let fav = 40;
 // 3 not my favorite number
 // ...
 // (Hint - use an if statement in your loop)
-
+// for (var i= 0; i < 101; i++){
+//   if(i === fav){
+//     console.log(i + " my favorite number!")
+//   }else{
+//     console.log(i + " not my favorite number")
+//   }
+// };
 
 // Exercise 10. In some of the exercises above, we had you write all 3 types of loops, for practice.
 // But in real life, how would you decide which type of loop to use? You might not have an
@@ -143,13 +149,13 @@ inside 1
 *********************************** 
 */
 
-// for (let outsideCounter = 0; outsideCounter <= 3; ???) {
-//   console.log("counting down from", outsideCounter);
-//   for (let insideCounter = outsideCounter; ???; ???) {
-//     console.log("inside", ???);
-//   }
-//   console.log("***********************************")
-// }
+for (let outsideCounter = 0; outsideCounter <= 3; outsideCounter++) {
+  console.log("counting down from", outsideCounter);
+  for (let insideCounter = outsideCounter; outsideCounter <= insideCounter + 1  ; insideCounter --) {
+    console.log("inside", insideCounter);
+  }
+  console.log("***********************************")
+}
 
 
 // Congrats, you made it to the end!
